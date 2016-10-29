@@ -1,14 +1,14 @@
 
 package org.usfirst.frc.team2415.robot;
 
+import org.usfirst.frc.team2415.robot.subsystems.SwerveSubsystem;
+import org.usfirst.frc.team2415.utilities.KrupczakGamepad;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team2415.robot.commands.*;
-import org.usfirst.frc.team2415.robot.subsystems.*;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -19,26 +19,20 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static DriveSubsystem driveSubsystem;
-	
-	public static WiredCatGamepad gamepad;
-	public static WiredCatJoystick joystick;
-	
+	public static SwerveSubsystem swerveSubsystem;
 
+	public static KrupczakGamepad gamepad;
+    Command autonomousCommand;
+    SendableChooser chooser;
 
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
+    	swerveSubsystem = new SwerveSubsystem();
     	
-    	gamepad = new WiredCatGamepad(0);
-    	joystick = new WiredCatJoystick(1);
-		
-    	driveSubsystem = new DriveSubsystem();
-    	
-    	driveSubsystem.resetEncoders();
-    	
+    	gamepad = new KrupczakGamepad(0);
     }
 	
 	/**
@@ -52,7 +46,6 @@ public class Robot extends IterativeRobot {
 	
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
-		
 	}
 
 	/**
@@ -65,6 +58,7 @@ public class Robot extends IterativeRobot {
 	 * or additional comparisons to the switch structure below with additional strings & commands.
 	 */
     public void autonomousInit() {
+    	
     }
 
     /**
@@ -75,10 +69,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
-        // continue until interrupted by another command, remove
-        // this line or comment it out.
+    	
     }
 
     /**

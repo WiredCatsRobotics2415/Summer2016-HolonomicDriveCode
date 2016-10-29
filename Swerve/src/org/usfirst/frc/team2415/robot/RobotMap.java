@@ -16,11 +16,12 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	//index 0 = pivot
-	//index 1 = drive 
-	public static final int[] SWERVE_TR = {1,2};
-	public static final int[] SWERVE_TL = {3,4};
-	public static final int[] SWERVE_BR = {5,6};
-	public static final int[] SWERVE_BL = {7,8};
+	//ROBOT DT SPECS
+	public static final double DRIVETRAIN_WIDTH = 1;   //left to right
+	public static final double DRIVETRAIN_LENGTH = 1;  //front to back
+	public static final double[] TOP_LEFT_SWERVE_INFO = {1,1,1,1};  //driveport, angleport, xpos, ypos
+	public static final double[] TOP_RIGHT_SWERVE_INFO = {2,2,2,2};
+	public static final double[] BOTTOM_LEFT_SWERVE_INFO = {3,3,3,3};
+	public static final double[] BOTTOM_RIGHT_SWERVE_INFO = {4,4,4,4};  //front to back
 	
 }
