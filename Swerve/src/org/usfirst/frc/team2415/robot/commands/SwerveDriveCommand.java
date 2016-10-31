@@ -28,8 +28,9 @@ public class SwerveDriveCommand extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	double FWD = Robot.gamepad.rightY(); //forward direction
-    	double STR = Robot.gamepad.rightY(); //strafe direction
+    	double STR = Robot.gamepad.rightX(); //strafe right direction
     	double RCW = Robot.gamepad.yaw();    //rotation clockwise
+    	 
     	
     	double A = STR - RCW*(L/R);
     	double B = STR + RCW*(L/R);

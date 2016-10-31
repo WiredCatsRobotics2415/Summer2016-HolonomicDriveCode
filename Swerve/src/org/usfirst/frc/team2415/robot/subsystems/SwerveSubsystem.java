@@ -5,6 +5,7 @@ import org.usfirst.frc.team2415.robot.commands.SwerveDriveCommand;
 import org.usfirst.frc.team2415.utilities.WiredCatSwerveModule;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -38,6 +39,13 @@ public class SwerveSubsystem extends Subsystem {
     
     public void set(WiredCatSwerveModule mod, double speed, double angle){
     	mod.set(speed, angle);
+    }
+    
+    public void updateStatus(){
+    	SmartDashboard.putNumber("Top Left Angle", topLeft.getAngleDegrees());
+    	SmartDashboard.putNumber("Top Right Angle", topRight.getAngleDegrees());
+    	SmartDashboard.putNumber("Bottom Left Angle", bottomLeft.getAngleDegrees());
+    	SmartDashboard.putNumber("Bottom Right Angle", bottomRight.getAngleDegrees());
     }
 }
 
