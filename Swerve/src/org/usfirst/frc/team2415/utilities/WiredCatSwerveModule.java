@@ -12,9 +12,11 @@ public class WiredCatSwerveModule {
 	public WiredCatSwerveModule(double[] info){
 		driveTalon = new CANTalon((int)info[0]);
 		angleTalon = new CANTalon((int)info[1]);
+		angleTalon.changeControlMode(TalonControlMode.Position);
+		angleTalon.set(0);
 		angleTalon.setFeedbackDevice(FeedbackDevice.CtreMagEncoder_Absolute);
 		angleTalon.setPID(0.1, 0, 0);
-		angleTalon.changeControlMode(TalonControlMode.Position);
+		angleTalon.enable();
 		xPosition = info[2];
 		yPosition = info[3];
 	}
