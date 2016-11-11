@@ -18,9 +18,10 @@ public class RobotMap {
 	
 	//index 0 = pivot
 	//index 1 = drive 
-	public static final int[] SWERVE_TR = {1,2};
-	public static final int[] SWERVE_TL = {3,4};
-	public static final int[] SWERVE_BR = {5,6};
-	public static final int[] SWERVE_BL = {7,8};
+	public static final int W1_PORT = 0;
+	public static final int W2_PORT = 1;
+	public static final int W3_PORT = 2;
+	
+	public static final double DRIVE_RADIUS = 10;
 	
 }

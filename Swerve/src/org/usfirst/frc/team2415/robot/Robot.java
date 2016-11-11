@@ -1,14 +1,12 @@
 
 package org.usfirst.frc.team2415.robot;
 
+import org.usfirst.frc.team2415.robot.subsystems.DriveSubsystem;
+import org.usfirst.frc.team2415.robot.utilities.KrupczakGamepad;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team2415.robot.commands.*;
-import org.usfirst.frc.team2415.robot.subsystems.*;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,7 +19,7 @@ public class Robot extends IterativeRobot {
 
 	public static DriveSubsystem driveSubsystem;
 	
-	public static WiredCatGamepad gamepad;
+	public static KrupczakGamepad gamepad;
 	public static WiredCatJoystick joystick;
 	
 
@@ -32,12 +30,11 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
     	
-    	gamepad = new WiredCatGamepad(0);
+    	gamepad = new KrupczakGamepad(0);
     	joystick = new WiredCatJoystick(1);
 		
     	driveSubsystem = new DriveSubsystem();
     	
-    	driveSubsystem.resetEncoders();
     	
     }
 	
