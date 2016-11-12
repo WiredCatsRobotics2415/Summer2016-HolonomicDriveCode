@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class DriveSubsystem extends Subsystem {
 	
-	public CANTalon W1, W2, W3;
+	public CANTalon w1, w2, w3;
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -19,9 +19,9 @@ public class DriveSubsystem extends Subsystem {
 	
 	public DriveSubsystem(){
 		
-		W1 = new CANTalon(RobotMap.W1_PORT);
-		W2 = new CANTalon(RobotMap.W2_PORT);
-		W3 = new CANTalon(RobotMap.W3_PORT);
+		w1 = new CANTalon(RobotMap.W1_PORT);
+		w2 = new CANTalon(RobotMap.W2_PORT);
+		w3 = new CANTalon(RobotMap.W3_PORT);
 		
 	}
 

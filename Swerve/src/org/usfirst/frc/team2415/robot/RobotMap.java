@@ -18,10 +18,13 @@ public class RobotMap {
 	
 	//index 0 = pivot
 	//index 1 = drive 
+	
 	public static final int W1_PORT = 0;
 	public static final int W2_PORT = 1;
 	public static final int W3_PORT = 2;
 	
-	public static final double DRIVE_RADIUS = 10;
+	public static final double W1_RADIUS = 10;
+	public static final double W2_RADIUS = 10;
+	public static final double W3_RADIUS = 10;
 	
 }
