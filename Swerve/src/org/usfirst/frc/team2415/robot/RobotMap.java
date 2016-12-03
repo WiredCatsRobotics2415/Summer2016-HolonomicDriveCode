@@ -23,8 +23,8 @@ public class RobotMap {
 	public static final int W2_PORT = 1;
 	public static final int W3_PORT = 2;
 	
-	public static final double W1_RADIUS = 10;
-	public static final double W2_RADIUS = 10;
-	public static final double W3_RADIUS = 10;
+	public static final double W1_RADIUS = 19.81;
+	public static final double W2_RADIUS = 19.81;
+	public static final double W3_RADIUS = 19.81;
 	
 }
